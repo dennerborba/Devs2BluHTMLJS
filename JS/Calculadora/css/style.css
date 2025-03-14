@@ -1,0 +1,68 @@
+body {
+    background-color: #151d34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    margin: 0 auto;
+    background-color: #68b1fc;
+    width: 44em;
+    height: 42em;
+    border-radius: 12px;
+}
+
+main > .barraNumeros {
+    box-sizing: border-box;
+    margin: 7px 7px auto;
+    background-color: #2b3a67;
+    width: 43em;
+    height: 5em;
+    border-radius: 12px;
+}
+
+main > .operacoes {
+    background-color: #A9CEF4;
+    margin: 7px 7px auto;
+    width: 43em;
+    height: 35.5em;
+    border-radius: 12px;
+}
+
+.meio {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 7px auto;
+    background-color: #A9CEF4;
+    height: 35em;
+    border-radius: 12px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 7px auto;
+    gap: 2px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    height: 10em;
+    width: 6em;
+    border-radius: 8px;
+}
+
+.numeros {
+    display: flex;
+    gap: 0.2em;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.numeros button {
+    flex-grow: 1;
+}
