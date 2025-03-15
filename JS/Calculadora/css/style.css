@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+
+
 body {
     background-color: #151d34;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: "Zen Dots", sans-serif; 
 }
 
 main {
@@ -15,54 +19,84 @@ main {
 }
 
 main > .barraNumeros {
-    box-sizing: border-box;
     margin: 7px 7px auto;
     background-color: #2b3a67;
     width: 43em;
     height: 5em;
     border-radius: 12px;
+    align-content: center;
 }
 
-main > .operacoes {
-    background-color: #A9CEF4;
-    margin: 7px 7px auto;
-    width: 43em;
-    height: 35.5em;
-    border-radius: 12px;
-}
-
-.meio {
+.barraNumeros p {
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    margin: 7px 7px auto;
-    background-color: #A9CEF4;
-    height: 35em;
-    border-radius: 12px;
+    font-size: 60px;
+    color: white;
+    margin-right: 0.2em;
+    float: inline-end;
 }
 
 .botoes {
     display: flex;
     flex-direction: column;
-    margin: 7px 7px auto;
+    flex-grow: 1;
     gap: 2px;
+}
+
+.menu {
+    background-color: #A9CEF4;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 7px 7px auto;
+    gap: 0.2em;
 }
 
 button {
     cursor: pointer;
     border: none;
     height: 10em;
-    width: 6em;
     border-radius: 8px;
+    font-family: "Lato", sans-serif;
 }
+
+.numeros button:hover {
+    background-color: #053a6e;
+    color: white;
+}
+
 
 .numeros {
     display: flex;
     gap: 0.2em;
-    flex-grow: 1;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .numeros button {
     flex-grow: 1;
+    height: 5.7em; 
+    min-height: 5.6em; 
+    font-size: 1.5em; 
+    font-weight: bolder;
+    color: #053a6e;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#clear {
+    flex-grow: 2;
+    background-color: #c90e0e;
+    color: white;
+}
+
+#clear:hover {
+    background-color: #910505;
+}
+
+
+#zero {
+    flex-grow: 2;
 }
