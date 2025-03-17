@@ -13,32 +13,31 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 </head>
-
 <body>
     <main>
         <div class="barraNumeros">
-            <p>0</p>
+            <p id="operacao">0</p>
     </div>
         <div class="menu">
             <div class="botoes">
                 <div class="numeros">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
                 </div>
                 <div class="numeros">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
                 </div>
                 <div class="numeros">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
 
                 </div>
                 <div class="numeros">
-                    <button id="zero">0</button>
+                    <button value="0" id="zero">0</button>
                 </div>
             </div>
             <div class="botoes">
@@ -52,20 +51,19 @@
                     </button>
                 </div>
                 <div class="numeros">
-                    <button>x</button>
-                    <button>+</button>
+                    <button value="*">x</button>
+                    <button value="+">+</button>
                 </div>
                     <div class="numeros">
-                        <button>/</button>
-                        <button>-</button>
+                        <button value="/">/</button>
+                        <button value="-">-</button>
                     </div>
                     <div class="numeros">
-                        <button>=</button>
+                        <button id="executarOperacao">=</button>
                     </div>
             </div>
         </div>
     </main>
-
     <script src="index.js"></script>
 </body>
 

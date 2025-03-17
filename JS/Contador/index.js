@@ -1,21 +1,41 @@
 const btnContador = document.getElementById("btnContador")
+const btnLimpar = document.getElementById("btnLimpar")
 const btnDado = document.getElementById("btnDado")
 const hContador = document.getElementById("hContador")
 const sFaces = document.getElementById("sFaces")
 const nDados = document.getElementById("iNumeroDados")
+const btnCentral = document.querySelector('.btnCentral');
+
 
 const cores = ['#13218a', '#911372', '#d66e0d']
 let iCor = 0
 
 const btnDadoClick = () => {
     const faces = parseInt(sFaces.value)
-    const result = obterNumeroAleatorio(1, faces)
-    hContador.innerText = `Resultado dado: ${result}`
+    document.querySelectorAll(".hContador").forEach(element => element.remove());
+
+    let qtdDados = parseInt(nDados.value) 
+    while (qtdDados > 0) {
+        let dadoValor = document.createElement('span')
+        dadoValor.innerText = obterNumeroAleatorio(1, faces)
+
+        let dado = document.createElement('h1')
+        dado.classList.add('hContador')
+        dado.appendChild(dadoValor)
+
+        btnCentral.appendChild(dado)
+        qtdDados--
+    }
 }
 
 const btnContadorClick = () => {
     let valorAtual = parseInt(hContador.innerText.replace("Resultado: ", "")) || 0;
     hContador.innerText = valorAtual + 1
+}
+
+const btnLimparClick = () => {
+    hContador.innerText = 0
+    btnContador.style.backgroundColor = 'darkslategrey'
 }
 
 const btnCorClick = () => {
@@ -36,5 +56,6 @@ function obterNumeroAleatorio(min, max) {
 
 btnContador.addEventListener('click', btnContadorClick)
 btnContador.addEventListener('click', btnCorClick)
+btnLimpar.addEventListener('click', btnLimparClick)
 btnDado.addEventListener('click', btnDadoClick)
 
