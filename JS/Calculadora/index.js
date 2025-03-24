@@ -10,7 +10,7 @@ numeros.forEach(numero => {
         const valor = e.target.value
         if (valor && valor !== undefined) {
             conta.push(valor)
-            operacao.innerText = conta.join(' ')
+            operacao.innerText = conta.join('')
         }
     })
 
@@ -29,6 +29,8 @@ const btnExecutarOperacaoClick = () => {
             const result = eval(expressao)
 
             operacao.innerText = result
+            conta.length = 0
+            conta.push(result.toString())
         }
         catch (e) {
             operacao.innerText = 'Erro'
