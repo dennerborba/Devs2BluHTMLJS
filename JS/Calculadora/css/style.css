@@ -87,7 +87,7 @@ button {
 }
 
 #clear {
-    flex-grow: 2;
+    flex-grow: 1;
     background-color: #c90e0e;
     color: white;
 }

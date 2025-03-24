@@ -2,6 +2,7 @@ const operacao = document.getElementById('operacao')
 const numeros = document.querySelectorAll('.botoes button')
 const btnExecutarOperacao = document.getElementById('executarOperacao')
 const btnClear = document.getElementById('clear')
+const btnBack = document.getElementById('back')
 
 const conta = []
 
@@ -13,13 +14,17 @@ numeros.forEach(numero => {
             operacao.innerText = conta.join('')
         }
     })
-
 });
 
 
 const btnClearClick = () => {
     conta.length = 0
     operacao.innerText = 0
+}
+
+btnBackClick = () => {
+    conta.pop()
+    operacao.innerText = conta.join('')
 }
 
 const btnExecutarOperacaoClick = () => {
@@ -38,5 +43,7 @@ const btnExecutarOperacaoClick = () => {
     }
 }
 
+
 btnClear.addEventListener('click', btnClearClick)
 btnExecutarOperacao.addEventListener('click', btnExecutarOperacaoClick)
+btnBack.addEventListener('click', btnBackClick)
